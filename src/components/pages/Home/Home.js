@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import './Home.scss';
 
@@ -16,8 +16,8 @@ class Home extends React.Component {
       <div className="Home">
       <h1>Home Component</h1>
       <button className="btn btn-primary" onClick={this.editEvent}>Edit a thing</button>
-      <link to="/scats/6789">View Single</link>
-      <link to="/new">Add New</link>
+      <Link to="/scats/6789">View Single</Link>
+      <Link to="/new">Add New</Link>
       </div>
     );
   }
