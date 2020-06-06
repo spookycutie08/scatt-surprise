@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import scatShape from '../../../helpers/propz/scatShape';
 import './ScatCard.scss';
@@ -10,12 +11,16 @@ class ScatCard extends React.Component {
 
   render() {
     const { scat } = this.props;
+    const singleLink = `/scats/${scat.id}`;
+    const editLink = `/edit/${scat.id}`;
     return (
       <div className="ScatCard col-3">
         <div className="card">
           <div className="card-body">
             <h5 className="card-title">{scat.location}</h5>
             <p className="card-text">{scat.notes}</p>
+            <Link className="btn btn-success" to={singleLink}>View</Link>
+            <Link className="btn btn-primary" to={editLink}>Edit</Link>
           </div>
         </div>
       </div>
